@@ -59,7 +59,7 @@ const Navbar = ({ selectedPage, setSelectedPage , isTopPage}: Props) => {
               </div>
             </div>
           ) : (
-            <Button OnClick={()=>setIsMenuToggled(!isMenuToggled)} className="rounded-full bg-secondary-500 p-2"> <Bars/> </Button>
+            <Button onClick={()=>setIsMenuToggled(!isMenuToggled)} className="rounded-full bg-secondary-500 p-2"> <Bars/> </Button>
           )}
         </div>
       </div>
@@ -67,7 +67,7 @@ const Navbar = ({ selectedPage, setSelectedPage , isTopPage}: Props) => {
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
           <div className="flex justify-end p-12 ">
-            <Button className="" OnClick={()=> setIsMenuToggled(!isMenuToggled)}> <X/> </Button>
+            <Button className="" onClick={()=> setIsMenuToggled(!isMenuToggled)}> <X/> </Button>
           </div>
           <div className='ml-[33%] flex flex-col gap-10 text-2xl'>
                 <Link
